@@ -3,12 +3,12 @@ configuration:
   has_webserver: true
   scoring:
     # npm test is expected to produce test output in results/exercise.xml file.
-    command: 'npm test'
+    command: "npm test"
     files:
-      - results/exercise.xml
+      - src/results/exercise.xml
   ide_config:
     default_open_files:
-      - apps/forms-exercise/src/app/app.component.ts
+      - src/app/app.component.ts
     project_menu:
       run: npm start
       install: npm install

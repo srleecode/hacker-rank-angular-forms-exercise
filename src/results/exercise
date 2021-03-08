@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 88.0.4324 (Windows 10 0.0.0)" package="exercise" timestamp="2021-03-08T10:20:35" id="0" hostname="Scott-PC" tests="2" errors="1" failures="2" time="0.117">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"/>
+  </properties>
+  <testcase name="Forms should emit userNameChange when form value changes" time="0.082" classname=".Forms">
+    <failure type="">Failed: userNameChange emit did not occur
+    at UserContext.eval (./src/app/app.component.spec.ts?:75:13)
+    at UserContext.eval (./node_modules/zone.js/dist/zone-testing.js?:1428:30)
+    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:390:26)
+    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:288:39)
+</failure>
+  </testcase>
+  <testcase name="Forms should emit only once when the value has not changed" time="0.035" classname=".Forms">
+    <failure type="">Failed: userNameChange did not emit
+    at UserContext.eval (./src/app/app.component.spec.ts?:97:13)
+    at UserContext.eval (./node_modules/zone.js/dist/zone-testing.js?:1428:30)
+    at ZoneDelegate.invoke (./node_modules/zone.js/dist/zone.js?:390:26)
+    at ProxyZoneSpec.onInvoke (./node_modules/zone.js/dist/zone-testing.js?:288:39)
+</failure>
+  </testcase>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

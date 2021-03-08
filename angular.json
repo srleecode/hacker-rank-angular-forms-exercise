@@ -1,124 +1,85 @@
 {
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "defaultProject": "forms-exercise",
-  "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
-    }
-  },
+  "newProjectRoot": "projects",
   "projects": {
-    "forms-exercise": {
+    "project": {
+      "root": "",
+      "sourceRoot": "src",
       "projectType": "application",
-      "root": "apps/forms-exercise",
-      "sourceRoot": "apps/forms-exercise/src",
-      "prefix": "angular",
+      "prefix": "app",
+      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/forms-exercise",
-            "index": "apps/forms-exercise/src/index.html",
-            "main": "apps/forms-exercise/src/main.ts",
-            "polyfills": "apps/forms-exercise/src/polyfills.ts",
-            "tsConfig": "apps/forms-exercise/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "apps/forms-exercise/src/favicon.ico",
-              "apps/forms-exercise/src/assets"
-            ],
-            "styles": ["apps/forms-exercise/src/styles.scss"],
+            "outputPath": "dist/project",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/forms-exercise/src/environments/environment.ts",
-                  "with": "apps/forms-exercise/src/environments/environment.prod.ts"
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
+              "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
+              "buildOptimizer": true
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "forms-exercise:build"
+            "browserTarget": "project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "forms-exercise:build:production"
+              "browserTarget": "project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "forms-exercise:build"
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/forms-exercise/src/**/*.ts",
-              "apps/forms-exercise/src/**/*.html"
-            ]
+            "browserTarget": "project:build"
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/forms-exercise"],
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "jestConfig": "apps/forms-exercise/jest.config.js",
-            "passWithNoTests": true
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
+            "styles": ["src/styles.css"],
+            "scripts": [],
+            "assets": ["src/favicon.ico", "src/assets"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
     }
-  }
+  },
+  "defaultProject": "project"
 }
