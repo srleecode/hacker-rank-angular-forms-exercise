@@ -4,7 +4,7 @@
 /dist
 /tmp
 /out-tsc
-/test-reports
+
 # dependencies
 /node_modules
 

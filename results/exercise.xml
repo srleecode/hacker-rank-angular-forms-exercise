@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="2" failures="2" errors="0" time="2.292">
+  <testsuite name="Forms" errors="0" failures="2" skipped="0" timestamp="2021-03-08T02:07:40" time="1.374" tests="2">
+    <testcase classname="Forms should emit userNameChange when form value changes" name="Forms should emit userNameChange when form value changes" time="0.096">
+      <failure>Error: Failed: &quot;userNameChange emit did not occur&quot;
+    at Env.fail (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-jasmine2\build\jasmine\Env.js:722:61)
+    at fail (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-jasmine2\build\jasmine\jasmineLight.js:156:23)
+    at C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\apps\forms-exercise\src\app\app.component.spec.ts:44:7
+    at C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\zone.js\dist\fake-async-test.js:610:34
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\zone.js\dist\zone.js:386:30)
+    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\zone.js\dist\proxy.js:117:43)
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\zone.js\dist\zone.js:385:36)
+    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\zone.js\dist\zone.js:143:47)
+    at Object.wrappedFunc (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-preset-angular\build\zone-patch\index.js:40:30)
+    at Object.asyncJestTest (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:106:37)
+    at C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-jasmine2\build\queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-jasmine2\build\queueRunner.js:28:19)
+    at C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-jasmine2\build\queueRunner.js:75:41</failure>
+    </testcase>
+    <testcase classname="Forms should emit only once when the value has not changed" name="Forms should emit only once when the value has not changed" time="0.031">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 1
+Received: 0
+    at C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\apps\forms-exercise\src\app\app.component.spec.ts:65:31
+    at C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\zone.js\dist\fake-async-test.js:610:34
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\zone.js\dist\zone.js:386:30)
+    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\zone.js\dist\proxy.js:117:43)
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\zone.js\dist\zone.js:385:36)
+    at Zone.Object.&lt;anonymous&gt;.Zone.run (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\zone.js\dist\zone.js:143:47)
+    at Object.wrappedFunc (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-preset-angular\build\zone-patch\index.js:40:30)
+    at Object.asyncJestTest (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:106:37)
+    at C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-jasmine2\build\queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-jasmine2\build\queueRunner.js:28:19)
+    at C:\Users\Default.SCOTT-PC\Documents\GitHub\hackerrank Angular forms\node_modules\jest-jasmine2\build\queueRunner.js:75:41</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
