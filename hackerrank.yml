@@ -1,0 +1,15 @@
+version: 1.0
+configuration:
+  has_webserver: true
+  scoring:
+    # npm test is expected to produce test output in results/unit.xml file.
+    command: 'npm test'
+    files:
+      - test-reports/exercise.xml
+  ide_config:
+    default_open_files:
+      - apps/forms-exercise/src/app/app.component.ts
+    project_menu:
+      run: npm start
+      install: npm install
+      test: npm test
