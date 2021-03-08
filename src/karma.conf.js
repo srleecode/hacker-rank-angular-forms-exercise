@@ -24,7 +24,7 @@ module.exports = function (config) {
     reporters: ['progress', 'kjhtml', 'junit'],
       junitReporter: {
       outputDir: 'results', // results will be saved as $outputDir/$browserName.xml
-      outputFile: 'exercise', // if included, results will be saved as $outputDir/$browserName/$outputFile
+      outputFile: 'exercise.xml', // if included, results will be saved as $outputDir/$browserName/$outputFile
       suite: 'exercise', // suite will become the package name attribute in xml testsuite element
       useBrowserName: false, // add browser name to report and classes names
       nameFormatter: undefined, // function (browser, result) to customize the name attribute in xml testcase element
